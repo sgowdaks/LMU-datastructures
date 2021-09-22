@@ -19,6 +19,11 @@ package edu.lmu.cmsi2120.HomeWork3;
     arr.insert(00);
     arr.insert(66);
     arr.insert(33);
+    arr.insert(100);
+    arr.insert(300);
+    arr.insert(400);
+    arr.insert(500);
+    arr.insert(1000);
     arr.display();
     int searchKey = 35; 
     if( arr.find(searchKey) )
