@@ -56,9 +56,12 @@ class HighArray
 
  public long getMax()
  {
+    if(nElems == 0){
+     return -1;              //If the length of array is zero then return -1
+   }
    long max = -1;
    for(int i = 0;i<nElems;i++){
-     if(a[i]>max){
+     if(a[i]>max){                           //Checking for the maximum number
        max = a[i];
      }
    }
@@ -69,7 +72,7 @@ class HighArray
    //System.out.println(a[0]);
    //Arrays.sort(a);
    long tmp ;
-   for(int i = 0;i<nElems;i++){
+   for(int i = 0;i<nElems;i++){            //Sorting the array
      for (int j = 1;j<nElems-i;j++){
        if(a[j-1]>a[j]){
          tmp = a[j];
@@ -83,7 +86,7 @@ class HighArray
    a1[0] = a[0];
 
    int j = 0;
-   for(int i = 1;i<a.length;i++){
+   for(int i = 1;i<a.length;i++){              //Checking for the duplicates
      if(a1[j]!=a[i]){
        j = j+1;
        a1[j] = a[i];
