@@ -1,4 +1,4 @@
-package edu.lmu.cmsi2120.ClassWork4;
+package edu.lmu.cmsi2120.hw4;
 
 public class IntLinkedList {
 
@@ -54,7 +54,7 @@ public class IntLinkedList {
               index--;
            }
         Node front  = ite.getCurrentNode();
-        //System.out.println(front.data);
+        System.out.println(front.data);
         Node back = front.next;
         front.next = newNode;
         newNode.next = back;
@@ -64,17 +64,20 @@ public class IntLinkedList {
        public int removeAt( int index){
          //Node newNode = new Node( value );
          Iterator ite = new Iterator();
-         while( index > 0 ) {
+         while( index > 1 ) {
                ite.next();
                index--;
             }
          Node front  = ite.getCurrentNode();
          //System.out.println(front.data);
          ite.next();
-         int val = ite.getCurrentInt();
+         Node middle = ite.getCurrentNode();
+         int val = middle.data;
+         front.next = middle.next;
+         //int val = ite.getCurrentInt();
          //ite.next();
-         Node Back = ite.getCurrentNode();
-         front.next = Back;
+         // Node Back = ite.getCurrentNode();
+         // front.next = Back;
          return val;
          //System.out.println(newNode.data);
         }
@@ -107,8 +110,6 @@ public class IntLinkedList {
          public Node getCurrentNode() {
             return currentNode;
          }
-
-
 
       }
    }
