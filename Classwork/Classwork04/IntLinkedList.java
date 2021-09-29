@@ -1,4 +1,4 @@
-package edu.lmu.cmsi2120.hw4;
+package edu.lmu.cmsi2120.clw4;
 
 public class IntLinkedList {
 
