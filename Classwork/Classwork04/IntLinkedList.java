@@ -64,6 +64,12 @@ public class IntLinkedList {
        public int removeAt( int index){
          //Node newNode = new Node( value );
          Iterator ite = new Iterator();
+           if (index == 0){
+            int val = ite.getCurrentInt();
+            ite.next();
+            this.head = ite.getCurrentNode();
+            return val;
+          }
          while( index > 1 ) {
                ite.next();
                index--;
