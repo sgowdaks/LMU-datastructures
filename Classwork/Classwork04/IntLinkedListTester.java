@@ -1,4 +1,4 @@
-package edu.lmu.cmsi2120.ClassWork4;
+package edu.lmu.cmsi2120.clw4;
 
 public class IntLinkedListTester {
 
