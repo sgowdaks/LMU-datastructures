@@ -1,0 +1,59 @@
+
+Homework01 Evaluation
+======================
+For details, please refer to Assignment #1 web page at:
+   http://bjohnson.lmu.build/cmsi281web/homework01.html
+
+score breakdown:
+==================================================================
+                                    possible       you got
+HighArray.java class evaluation     --------       --------
+   coding style                     [3 pts.]        3 pts.  [4 pts. if EC]
+      1 pt consistent indents
+      1 pt good variable names
+      1 pt commenting
+      1 pt EC file header [possible 1 pt. extra credit]
+   getMax() method exists           [1 pt.]         1 pt.
+   noDups() method exists           [1 pt.]         1 pt.
+   file compiles                    [1 pt.]         1 pt.
+
+HighArrayApp.java class evaluation
+   coding style                     [3 pts.]        3 pts.  [4 pts. if EC]
+      1 pt consistent indents
+      1 pt good variable names
+      1 pt commenting
+      1 pt EC file header [possible 1 pt. extra credit]
+   file compiles                    [1 pt.]         1 pt.
+   min 5 new tests for getMax()     [5 pts.]        1 pts.
+   test[s] for noDups()             [5 pts.]        5 pts.
+
+Results of running of the program
+   program runs, passes all tests   [5 pts.]        5 pts.
+
+
+you got 22 out of 25 which is 88% which is a B-plus
+
+Several problems here:
+
+   1. Everything compiled fine from the command line, but since you have the
+      two "package" statements, it wouldn't run.  When you include those the
+      JVM is looking in the package to find the "main()" method, and since
+      there's no package on MY machine, I get an error that the JVM can't
+      find or load the main class HighArrayApp.  I have a feeling this is
+      because you are using an IDE, which I have mentioned in class several
+      times.  MAKE SURE YOUR CODE WILL COMPILE AND RUN DIRECTLY FROM THE
+      COMMAND LINE/TERMINAL WINDOW BEFORE YOU COMMIT.  Next time you'll get
+      no credit for otherwise working code.
+   2. Your output, while correct, is very hard to read, because there aren't
+      any line breaks.  It will help for readability for each output to go
+      on a separate line.  I notice that in your "display()" method you are
+      using "System.out.print()" and you have commented out the line after
+      it which uses "System.out.println()".  The "ln" at the end of the name
+      of the "System.out.println()" method makes sure that there is a newline
+      output.
+   3. Finally, the specification calls for at least 5 tests for the "getMax()"
+      method.  You only have one test.  You could have made up two of your
+      lost points if you had put file headers in your code ~ those were extra
+      credit points.
+
+Still, not a bad first effort!  Hang in there and keep up the good work!

@@ -1,4 +1,4 @@
-package edu.lmu.cmsi2120.HomeWork3;
+// package edu.lmu.cmsi2120.HomeWork3;
 //import java.util.Arrays;
 
 class HighArray

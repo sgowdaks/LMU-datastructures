@@ -1,4 +1,4 @@
-package edu.lmu.cmsi2120.HomeWork3;
+// package edu.lmu.cmsi2120.HomeWork3;
 
  class HighArrayApp
  {
@@ -25,7 +25,7 @@ package edu.lmu.cmsi2120.HomeWork3;
     arr.insert(500);
     arr.insert(1000);
     arr.display();
-    int searchKey = 35; 
+    int searchKey = 35;
     if( arr.find(searchKey) )
       System.out.println("Found " + searchKey);
     else
