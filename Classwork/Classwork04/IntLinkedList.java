@@ -1,4 +1,4 @@
-package edu.lmu.cmsi2120.clw4;
+package edu.lmu.cmsi2120.hw4;
 
 public class IntLinkedList {
 
@@ -35,7 +35,7 @@ public class IntLinkedList {
       }
 
       public Iterator getIteratorAt( int index ) {
-         if( (index > size) || (index < 0) ) {
+         if( (index >= size) || (index < 0) ) {
             throw new IllegalArgumentException();
          }
          Iterator it = new Iterator();
@@ -49,40 +49,49 @@ public class IntLinkedList {
       public void insertAt(int value, int index){
         Node newNode = new Node( value );
         Iterator ite = new Iterator();
-        while( index > 0 ) {
-              ite.next();
-              index--;
-           }
-        Node front  = ite.getCurrentNode();
-        System.out.println(front.data);
+        if(index == 0){
+          Iterator k = getIteratorAt( 0 );
+          newNode.next = k.getCurrentNode();
+          this.head = newNode;
+
+        }else{
+        Iterator k = getIteratorAt( index-1 );
+        Node front  = k.getCurrentNode();
+        //System.out.println(front.data);
         Node back = front.next;
         front.next = newNode;
         newNode.next = back;
         //System.out.println(newNode.data);
+      }
+      this.size = this.size+1;
        }
 
        public int removeAt( int index){
          //Node newNode = new Node( value );
-         Iterator ite = new Iterator();
-           if (index == 0){
-            int val = ite.getCurrentInt();
-            ite.next();
-            this.head = ite.getCurrentNode();
+         //System.out.println(index);
+         //Iterator k = getIteratorAt(0);
+         if (index == 0){
+           Iterator k = getIteratorAt(0);
+            int val = k.getCurrentInt();
+            k.next();
+            this.head = k.getCurrentNode();
             return val;
           }
-         while( index > 1 ) {
-               ite.next();
-               index--;
-            }
-         Node front  = ite.getCurrentNode();
+         Iterator k = getIteratorAt(index-1);
+         Node front  = k.getCurrentNode();
          //System.out.println(front.data);
-         ite.next();
-         Node middle = ite.getCurrentNode();
+         k.next();
+         Node middle = k.getCurrentNode();
          int val = middle.data;
+         if(middle.next == null){
+           front.next =  null;
+           this.size = this.size -1;
+           return val;
+         }
          front.next = middle.next;
+         this.size = this.size -1;
          //int val = ite.getCurrentInt();
-         //ite.next();
-         // Node Back = ite.getCurrentNode();
+         //ite.ne         // Node Back = ite.getCurrentNode();
          // front.next = Back;
          return val;
          //System.out.println(newNode.data);
