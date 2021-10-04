@@ -1,4 +1,4 @@
-package edu.lmu.cmsi2120.clw4;
+package edu.lmu.cmsi2120.hw4;
 
 public class IntLinkedListTester {
 
@@ -13,9 +13,16 @@ public class IntLinkedListTester {
          myList.prepend(  5 );
          myList.prepend(  3 );
          myList.prepend(  2 );
-         myList.insertAt(100,4);
-         int val = myList.removeAt(4);
+         myList.insertAt(100,1);
+         myList.insertAt(8,0);
+         int val = myList.removeAt(myList.getSize()-1);
+         //System.out.println("heelo");
+         //System.out.println(myLis;
+
+         // int val2 = myList.removeAt((myList.getSize()));
+         // int val3 = myList.removeAt((myList.getSize()));
          IntLinkedList.Iterator myIt = myList.getIteratorAt( 0 );
+         //int val = myList.removeAt(myIt.size-1);
          System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 2
          myIt.next();
          System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 3
@@ -23,7 +30,8 @@ public class IntLinkedListTester {
          System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 5
          myIt.next();
          System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 7
-         myIt = myList.getIteratorAt( 3 );
+         //myIt = myList.getIteratorAt( 3 );
+         myIt.next();
          System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 7
          myIt.next();
          System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 11
@@ -31,7 +39,14 @@ public class IntLinkedListTester {
          System.out.println( "Current Node is: " + myIt.getCurrentInt() );    // 13
          myIt.next();
          System.out.println( "Current Node is: " + myIt.getCurrentInt() ); //17
-         System.out.println(val );
+         myIt.next();
+         System.out.println( "Current Node is: " + myIt.getCurrentInt() );
+         myIt.next();
+         System.out.println( "Current Node is: " + myIt.getCurrentInt() );
+         System.out.println("Current Value removed is: "+ val );
+         // System.out.println("Current Value removed is: "+ val2);
+         // System.out.println("Current Value removed is: "+ val3);
+
 
       }
    }
