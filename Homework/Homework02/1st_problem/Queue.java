@@ -58,12 +58,12 @@ public boolean isFull() // true if queue is full
 //--------------------------------------------------------------
 public int size() // number of items in queue
 {
-return nItems;
+  return nItems;
 }
 //--------------------------------------------------------------
 public void display(){
   System.out.println("First Inserted Item to the Last Inserted Item");
-  int nnItems = nItems;
+  int nnItems = nItems;   //nnItems is used inorder to not alter original nItems
   if( isEmpty()){
     System.out.println("Queue Is Empty");
   }else{
