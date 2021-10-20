@@ -1,7 +1,7 @@
-package hm22;
+//package hm22;
 
 public class LinkApp {
-public static void main(String[] args) {
+   public static void main(String[] args) {
         CreateList cl = new CreateList();
         //Adds data to the list
         cl.add(1);
