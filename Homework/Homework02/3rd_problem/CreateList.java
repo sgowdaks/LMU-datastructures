@@ -1,4 +1,4 @@
-package hm22;
+//package hm22;
 
 public class CreateList {
     //Represents the node of list.
