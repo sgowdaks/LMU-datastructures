@@ -1,1 +1,31 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
+public class BrobInttoRepresentation {
+    
+    //take a large brobint number and convert it into a list where the 0 index is the last character of the integer.
+    
+    public static void main(String args[]) {
+      
+      String Str1 = new String(args[0]);
+      
+      char inputCharacter = 0;
+      
+      List<Integer> inputString = new ArrayList<Integer>();
+      
+      for(int i = Str1.length() - 1; i >= 0; i--){
+          
+          inputCharacter = Str1.charAt(i);
+          
+          int current = Character.getNumericValue(inputCharacter); 
+          
+          inputString.add(current);
+          
+      }
+      
+      System.out.println(inputString);
+      
+    }
+}
