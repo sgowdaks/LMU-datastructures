@@ -1,0 +1,87 @@
+
+Homework02 Evaluation
+======================
+
+Overall, a pretty good job on this assignment!  You did what was required,
+and it all works as advertised.
+
+A couple of things to keep in mind when you're writing software in general:
+   1. Your QueueApp class could use a little more output to the user, to let
+      her know what is going on with the program.  For example, you never
+      print out the original contents of the first Queue with 10, 20, ... 60
+      so that the user knows it exists and works.  You never test the two
+      methods "isFull()" and "isEmpty()", although that wasn't really one of
+      the requirements.  You also didn't test your "peekFront()".  It's a
+      good idea to test EVERYTHING.
+   2. Same things go for the Deque and DequeApp program ~ you don't test
+      either "removeXXX()" method, nor do you check the "isFull()" and
+      "isEmpty()" methods.  Those WERE required tests.
+   3. The more information you print to the display to let the user know the
+      state of the system, the better the user will like your software.  I do
+      appreciate that you wrote comments in your code to tell me what I will
+      expect, but it's better to output that to the user.  Try to go for an
+      "expected" vs. "actual" approach, such as
+            expected:   [40][50][60][70]
+            actual:     [40][50][60][70]
+   4. In your CircularStack program, you should display the list values as a
+      STACK rather than just a LIST.  There are several ways to do this....
+
+Other than that, nice job, and your code is very nice looking!
+
+scores:
+=============================
+Queue.java
+   Queue class compiles                      [1 pt.]     1 pt
+   display method exists                     [1 pt.]     1 pt
+QueueApp.java or main in Queue.java
+   QueueApp class compiles                   [1 pt.]     1 pt
+   tests insert()                            [1 pt.]     1 pt
+   tests remove()                            [1 pt.]     1 pt
+   tests display()                           [1 pt.]     1 pt
+   tests wrap-around insert, remove, display [1 pt.]     1 pt
+Deque.java
+   Deque class compiles                      [1 pt.]     1 pt
+   insertLeft method exists                  [1 pt.]     1 pt
+   insertRight method exists                 [1 pt.]     1 pt
+   removeLeft method exists                  [1 pt.]     1 pt
+   removeRight method exists                 [1 pt.]     1 pt
+   isEmpty method exists                     [1 pt.]     1 pt
+   isFull method exists                      [1 pt.]     1 pt
+DequeApp.java or main in Deque.java
+   tests insertLeft()                        [1 pt.]     1 pt
+   tests insertRight()                       [1 pt.]     1 pt
+   tests removeLeft()                        [1 pt.]     0 pt
+   tests removeRight()                       [1 pt.]     0 pt
+   tests isEmpty()                           [1 pt.]     0 pt
+   tests isFull()                            [1 pt.]     0 pt
+CircluarLinkedList.java
+   Circular linked list class compiles       [1 pt.]     1 pt
+   insertion method works                    [1 pt.]     1 pt
+   deletion method works                     [1 pt.]     1 pt
+   searching method works                    [1 pt.]     1 pt
+CircularStack.java
+   circular stack class compiles             [1 pt.]     1 pt
+   tests work as advertised                  [1 pt.]     1 pt
+Josephus.java
+   Josephus problem class compiles           [EC 2 pt.]
+   works as advertised                       [EC 3 pt.]
+Coding style
+   Good names, consistent indenting          [4 pt.]     4 pt
+   Headers in all files                      [5 pt.]     5 pt
+
+Total points is 35 for Queue, Deque, and Circular x2
+ extra credit is 5 points for Josephus
+-------------------
+ Grand total is 40 points
+
+You got 31 out of 35 which is 88.57% which is a B-plus
+
+======================================
+Homework total for the semester
+
+      homework01  88.00% of 5 points =  4.40 points
+      homework02  88.57% of 5 points =  4.43 points
+                          Total points: 8.83 points = 88.29%
+                                                       which is a B-plus
+
+Keep up the good work ~ you've got this.......
