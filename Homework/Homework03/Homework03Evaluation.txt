@@ -1,0 +1,73 @@
+
+Homework03 Evaluation
+======================
+
+scores:
+=============================
+OddEven-Sorter.java
+   oddEvenSort implemented       [1 pt.]     1 point
+   compiles                      [1 pt.]     1 point
+   main() method                 [1 pt.]     1 point
+   works as advertised           [1 pt.]     1 point
+
+SimonGame.java
+   randomized array              [1 pt.]     1 point
+   display/erase sequences       [1 pt.]     1 point
+   check user's guess            [1 pt.]     1 point
+   increment letter count        [1 pt.]     1 point
+   play again on bad entry       [1 pt.]     1 point
+   compiles                      [1 pt.]     1 point
+   works as advertised           [1 pt.]     1 point
+
+HuffmanCoding.java
+   count character occurrences   [1 pt.]     1 point
+   queue to build tree           [1 pt.]     1 point
+   tree constructed correctly    [1 pt.]     1 point
+   message encoded correctly     [1 pt.]     1 point
+   message decoded correctly     [1 pt.]     1 point
+   compiles                      [1 pt.]   0.5 point
+   works as advertised           [1 pt.]     1 point
+
+Coding style                     [1 pt.]     1 point
+Tests written for all classes    [1 pt.]     1 point
+Headers in all files             [1 pt.]     1 point
+
+Total possible credit 20 points
+
+You got 20.5 out of 21 which is 97.62% which is an A-plus
+
+===============================================
+Nice work on this assignment!  Just a couple of comments/observations:
+
+I may have mentioned previously that convention says you should name a class
+file starting with an uppercase letter.  Your 'oddEvenSort' program should
+be named as 'OddEvenSort' or better yet, 'OddEvenSorter' which is the noun
+version of what it does.  At least you got the name of the class and file to
+match!  Also, while it does work, the more information you give to the user,
+the more your program will be appreciated.  You do say that the output is a
+"sorted array" but that doesn't mean a lot without either seeing the array
+BEFORE it is sorted, or having to look at the code.  Still, it works!
+
+Huffman works fine, once I commented out your package statements.  You guys
+need to knock it off with that.  You don't need to do a package if all the
+code is in the same directory.  You especially cause problems if you name a
+package differently than the directory it is in.  If packages is a thing you
+need to do to get the program to work with your IDE like VSCode or something,
+I get that, but PLEASE, as I have said many times before, MAKE SURE YOUR CODE
+RUNS FROM THE COMMAND LINE, since that's how I evaluate it.  It is only
+costing you 1/2 point this time, but next time, no credit for problem with a
+package statement unless the problem specification asks for it.
+
+Nice job on Simon!  You are really using some good sophisticated Java code
+in this one.  Good idea to limit the user to three games, otherwise they may
+get bored...
+
+======================================
+Homework total for the semester
+
+      homework01   88.00% of 5 points =  4.40 points
+      homework02   88.57% of 5 points =  4.43 points
+      homework03   97.62% of 5 points =  4.88 points
+                          Total points: 13.71 out of 15 = 91.41%
+                                        which is an A-minus
+Keep up the good work!
