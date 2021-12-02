@@ -27,10 +27,19 @@ public class DepthFirstSearcher   {
    private static final int TEST_GRAPH_SIZE = 9;
    private static char [] output = new char[TEST_GRAPH_SIZE];
    private static int index = 0;
+   static Queue<Character> q = new LinkedList<>();
 
-  // Do a depth first search on theGraph from a specified Vertex.  The Vertex that
-  //  is passed as an argument is used as the root in the recursive search.
-
+  // // Do a depth first search on theGraph from a specified Vertex.  The Vertex that
+  // //  is passed as an argument is used as the root in the recursive search.
+  // public static void dfs( Graph theGraph, char currentVertex ){
+  //   System.out.println( "  ** Visited " + currentVertex + " **" );
+  //   //output[index++] = currentVertex;
+  //   if(!theGraph.wasVisited( currentVertex )){
+  //     theGraph.markVisited( currentVertex );
+  //     output[index++] = currentVertex;
+  //   }
+  //
+  // }
 
 
 
@@ -40,7 +49,6 @@ public class DepthFirstSearcher   {
       //theGraph.markVisited( currentVertex );
       System.out.println( "  ** Visited " + currentVertex + " **" );
       //output[index++] = currentVertex;
-      List<Character> stack = new ArrayList<>();
       //int Sindex = 0;
 
      // Try all the Vertexs in the graph in the following way:
@@ -51,7 +59,8 @@ public class DepthFirstSearcher   {
        theGraph.markVisited( currentVertex );
        output[index++] = currentVertex;
      }
-      for( char nextVertex = 'A'; nextVertex <= ('A' + TEST_GRAPH_SIZE - 1); nextVertex++ ) {
+
+     for( char nextVertex = 'A'; nextVertex <= ('A' + TEST_GRAPH_SIZE - 1); nextVertex++ ) {
          if( DEBUG_ON ) System.out.print( "  Checking " + nextVertex + " >> " );
 
          if( theGraph.areTwoVertexsConnected( currentVertex, nextVertex ) ) {
@@ -65,7 +74,7 @@ public class DepthFirstSearcher   {
               // System.out.println(nextVertex);
               output[index++] = nextVertex;
               //stack[Sindex++] = nextVertex;
-              stack.add(nextVertex);
+              q.add(nextVertex);
                //if( DEBUG_ON ) System.out.println( "Searching with " + nextVertex + " as root of tree." );
 
                //dfs( theGraph, nextVertex );   // <-- HERE'S THE RECURSION!!
@@ -82,14 +91,8 @@ public class DepthFirstSearcher   {
          }
       }
       System.out.println(output);
-      if(stack.size()>0){
-        for(int i = 0;i<(stack.size());i++){
-          //System.out.println(stack[i]);
-          System.out.println(stack.size());
-          if(stack.size() > 0){
-              dfs( theGraph, stack.get(i));
-          }
-        }
+      if(q.size()>0){
+        dfs(theGraph, q.remove());
     }
 
    }
