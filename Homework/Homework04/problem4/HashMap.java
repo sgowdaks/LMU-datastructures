@@ -1,7 +1,7 @@
 import java.util.*;
 //import java.util.Scanner;
 
-public class Main{
+public class HashMap{
   public static void main(String[] args){
 
       Scanner scan = new Scanner(System.in);
