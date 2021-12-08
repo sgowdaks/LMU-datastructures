@@ -38,12 +38,13 @@ public class HashMap{
                 }else{
                     l = k;
                     k = k + 1;
-                    while(k < arraySize && arrli.get(k) == 0 ){
+                    while(k < arraySize && arrli.get(k) != 0 ){
                         k = k+1;
+                        System.out.println("Hello");
                     }
                     if(k > arraySize){
                         k = 0;
-                        while(k < l && arrli.get(k) == 0 ){
+                        while(k < l && arrli.get(k) != 0 ){
                         k = k+1;
                         }
                         if(k > l){
@@ -55,7 +56,7 @@ public class HashMap{
                         arrli.add(k,key);
                     }
                 }
-
+                System.out.println(k);
                 break;
 
             case 2:
@@ -87,13 +88,13 @@ public class HashMap{
 
    public static int search(int f, ArrayList<Integer> arrli, int key, int arraySize){
         if(arrli.get(f) == key ){
-            System.out.println("hello");
-            System.out.println(f);
+            //System.out.println("hello");
+            //System.out.println(f);
             return f;
         }else{
             int l = f;
             f = f + 1;
-            while(f < arraySize && arrli.get(f) == key ){
+            while(f < arraySize && arrli.get(f) != key ){
                 f = f+1;
             }
             if(f > arraySize){
@@ -123,7 +124,7 @@ public class HashMap{
         for(i = 0; i < Stringkey.length(); i += arraySizeLength){
           if(i+arraySizeLength < Stringkey.length()){
             String st = Stringkey.substring(i, i+arraySizeLength);
-            System.out.println(st);
+            //System.out.println(st);
             groupSum += Integer.parseInt(st);
           }
         }
