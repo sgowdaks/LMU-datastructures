@@ -13,6 +13,7 @@ public class linearProbing{
            int key = 0;
            int choice = scan.nextInt();
            switch (choice) {
+             //insert 
            case 1:
 
                System.out.println("Enter the key");
@@ -46,7 +47,7 @@ public class linearProbing{
                }
                System.out.println(k);
                break;
-
+            //get
            case 2:
                System.out.println("Enter key");
                key = scan.nextInt();
@@ -101,7 +102,7 @@ public class linearProbing{
                }
            }
   }
-
+    //returns the hashed value
    public int hashFunc(int key, int arraySize){
 
        int keyLength = Length(key);
