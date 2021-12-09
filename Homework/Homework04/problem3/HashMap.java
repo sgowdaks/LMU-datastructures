@@ -8,7 +8,7 @@ public class HashMap{
       System.out.println("Enter The array Size");
       int arraySize  = scan.nextInt();
       ArrayList<String> arrli  = new ArrayList<String>(Collections.nCopies(arraySize, ""));
-      linearProbing ln = new linearProbing();
+      LinearProbing ln = new LinearProbing();
       ln.scanForElements(arrli, arraySize);
       //arrli.add(k,key);
 

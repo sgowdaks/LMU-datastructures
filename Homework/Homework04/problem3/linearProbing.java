@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class linearProbing {
+public class LinearProbing {
     public static void scanForElements(ArrayList<String> arrli, int arraySize) {
         char ch;
         do {
